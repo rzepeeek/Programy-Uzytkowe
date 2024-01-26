@@ -1,1 +1,83 @@
+// ZADANIE 1
 
+--> sind(5*%pi/180) + cosd(5*%pi/180) + tand(5*%pi/180) + cotd(5*%pi/180)
+ ans  =
+
+   657.56381
+
+--> A = [1,-2,3,0;2,3,0,6;1,-2,7,8;6,3,-1,0]
+ A  = 
+
+   1.  -2.   3.   0.
+   2.   3.   0.   6.
+   1.  -2.   7.   8.
+   6.   3.  -1.   0.
+
+--> B = [2,6,-2,0;3,4,0,7;1,-2,6,8;8,-1,2,0]
+ B  = 
+
+   2.   6.  -2.   0.
+   3.   4.   0.   7.
+   1.  -2.   6.   8.
+   8.  -1.   2.   0.
+
+--> A - B'
+ ans  =
+
+  -1.  -5.   2.  -8.
+  -4.  -1.   2.   7.
+   3.  -2.   1.   6.
+   6.  -4.  -9.   0.
+
+--> sum = 0;
+
+--> a = 28;
+
+--> h = 15;
+
+--> Pc = a^2 + 2*a*h;
+
+--> disp(Pc)
+
+   1624.
+
+--> suma = 0;
+
+--> for i =7:25 do
+  > suma = suma+factorial(i)/4^i - i;
+  > end
+
+--> disp(suma)
+
+   1.643D+10
+
+// ZADANIE 2
+
+f1 = @(x) 2.^(x^2) + 4.x;
+f2 = @(x) (x.^4 + 4.x) ./ (11.x^2 + 3) + 7x;
+
+x = linspace(-2, 4, 100);
+
+figure();
+
+plot(x, f1(x), 'r');
+
+plot(x, f2(x), 'b');
+
+xlabel('x');
+ylabel('f(x)');
+title('Wykres dwóch funkcji');
+legend('Location', 'NorthWest');
+
+// ZADANIE 3
+
+rok = ['2015', '2017', '2019'];
+mtv = [74, 82, 93];
+eska = [72, 80, 91];
+vhl = [73, 84, 90];
+
+bar([mtv', eska', vhl'], 'grouped');
+title('Liczba punktów dla różnych stacji muzycznych w latach 2015, 2017 i 2019');
+xlabel('Rok');
+ylabel('Liczba punktów');
+legend('MTV', 'Eska', 'VHL', 'Location', 'northwest');
